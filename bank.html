@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bank.css">
+    <title>Bank Account Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Account Management</h1>
+        <!-- Account creation form -->
+        <div class="account-form">
+            <input type="text" id="accountHolder" placeholder="Account Holder Name">
+            <input type="number" id="initialBalance" placeholder="Initial Balance">
+            <select id="accountType">
+                <option value="Checking">Checking</option>
+                <option value="Savings">Savings</option>
+            </select>
+            <button id="createAccount">Create Account</button>
+        </div>
+        <!-- Account information and message display -->
+        <div class="account-info">
+            <p>Account Holder: <span id="displayAccountHolder"></span></p>
+            <p>Account Type: <span id="displayAccountType"></span></p>
+            <p>Balance: $<span id="displayBalance"></span></p>
+            <div id="message" class="message"></div>
+        </div>
+        <!-- Action buttons -->
+        <div class="actions">
+            <button id="deposit">Deposit</button>
+            <button id="withdraw">Withdraw</button>
+            <button id="checkBalance">Check Balance</button>
+            <button id="showHistory">Transaction History</button>
+        </div>
+        <!-- Transaction history display -->
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul id="transactionHistory"></ul>
+        </div>
+    </div>
+    <script src="bank.js"></script>
+</body>
+</html>
